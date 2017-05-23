@@ -14,7 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | you globally define which systems you would like loaded with every
 | request.
 |
-| -------------------------------------------------------------------
+
+|| -------------------------------------------------------------------
 | Instructions
 | -------------------------------------------------------------------
 |
@@ -27,7 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | 5. Custom config files
 | 6. Language files
 | 7. Models
-|
 */
 
 /*
