@@ -1,0 +1,75 @@
+.menu-area{
+    position: fixed;
+    z-index: 10;
+    width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity:0.9;
+}
+
+.menu-part-area{
+    float: left;
+}
+
+.menu-link-area{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu-link-area:hover {
+    color: inherit;
+    background-color: #4CAF50;
+}
+
+.footer-area{
+    padding: 30px;
+    color: #8c8c8c;
+    background-color: #222222;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.complex-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-size:xx-large;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.complex-contact{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.green-backgorund{
+    text-align: center;
+    color: whitesmoke;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #4CAF50;
+}
+
+.dark-background{
+    text-align: center;
+    color: whitesmoke;
+    margin: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #222222;
+}
