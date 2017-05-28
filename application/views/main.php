@@ -5,8 +5,7 @@
         <li class="menu-part-area"><a class="menu-link-area" href="#about">O nás</a></li>
         <li class="menu-part-area"><a class="menu-link-area" href="#ponuka">Naša ponuka</a></li>
         <li class="menu-part-area"><a class="menu-link-area" href="#kontakt">Kontakt</a></li>
-        <li class="menu-part-area"><a class="menu-link-area" href="<?php echo site_url('about/index') ?>">Rezervácia online</a></li>
-        <li class="menu-part-area">Kontakt</li>
+        <li class="menu-part-area"><a class="menu-link-area" href="<?php echo site_url('reservation/index') ?>">Rezervácia online</a></li>
     </ul>
 </div>
 <a name="home"></a>
@@ -80,7 +79,7 @@
                     <div style="padding-top: 15px">
                     <h2>Squash</h2>
                     Tento šport si môžete zahrať na našich dvoch squashových kurtoch so svojim partnerom, alebo sám
-                    proti stene ak vám neprekáža, že vždy prehráte.
+                    proti stene ak vám neprekáža, že stena vždy vyhrá.
                     </div>
                 </div>
             </div>
