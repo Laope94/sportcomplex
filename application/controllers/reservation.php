@@ -1,5 +1,7 @@
 <?php
 
+    if (!defined('BASEPATH'))
+        exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
  * User: Timothy
@@ -11,7 +13,6 @@ class reservation extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->library('session');
     }
 
     public function index()
@@ -36,7 +37,6 @@ class reservation extends CI_Controller
         $this->load->database();
         $this->load->model('DBModel', NULL, TRUE);
         $data['query'] = $this->DBModel->getsportplace();
-        $this->load->helper('url');
         $this->load->view('header');
         $this->load->view('choose_place', $data);
         $this->load->view('footer');
@@ -69,7 +69,6 @@ class reservation extends CI_Controller
         $values['query'] = $this->DBModel->getfreetime($date, $id);
         $values['id'] = $id;
         $values['date'] = $date;
-        $this->load->helper('url');
         $this->load->view('header');
         $this->load->view('choose_time', $values);
         $this->load->view('footer');
@@ -114,7 +113,6 @@ class reservation extends CI_Controller
         }
         $this->load->model('DBModel', NULL, TRUE);
         $data['query'] = $this->DBModel->getpaymentmethod();
-        $this->load->helper('url');
         $this->load->view('header');
         $this->load->view('finalize', $data);
         $this->load->view('footer');
