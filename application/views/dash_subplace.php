@@ -9,8 +9,13 @@
                 <a href="<?php echo site_url('admin/show_subplaces');?>">Športoviská</a> <br>
                 <a href="<?php echo site_url('admin/show_payments');?>">Metódy platby</a> <br> <br>
                 Lower data <br>
-                <a>Faktúry</a> <br>
-                <a>Položky na faktúre</a> <br>
+                <a href="<?php echo site_url('admin/show_invoices');?>">Faktúry</a> <br>
+                <a href="<?php echo site_url('admin/show_entries');?>">Položky na faktúre</a> <br><br>
+                Stats<br>
+                <a>chart 1</a><br>
+                <a>chart 2</a><br>
+                <a>chart 3</a><br>
+                <a>chart 4</a><br>
             </div>
         </div>
         <div class="col-sm-9">

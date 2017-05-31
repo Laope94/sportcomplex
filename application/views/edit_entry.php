@@ -20,24 +20,27 @@
         </div>
         <div class="col-sm-9">
             <div class="dash-content">
-                <form action="<?php echo site_url('admin/commit_subplace');?>" method="post">
+                <form action="<?php echo site_url('admin/commit_entry'); ?>" method="post">
                     Športovisko:
                     <select name="sport_place">
-                        <?php foreach($places as $row) { ?>
+                        <?php foreach($places as $row) {?>
                             <option value="<?php echo $row->id ?>"
-                                <?php if ($row->id == $query->id2) echo " selected " ?>>
-                                <?php echo $row->name?>
-                            </option>
+                            <?php if($row->id==$query->sub_place){ echo " selected ";} ?> >
+                                <?php echo $row->sport_place; echo " - "; echo $row->sub_place;?></option>
                         <?php } ?>
                     </select>
+                    ID faktúry:
+                    <select name="invoice_id">
+                        <?php foreach($invoice as $row) {?>
+                            <option value="<?php echo $row->id?>"
+                                <?php if($row->id==$query->invoice){ echo " selected ";} ?> ><?php echo $row->id?></option>
+                        <?php } ?>
+                    </select>
+                    <br><br>Začiatok: <input type="datetime-local" required name="start" value="<?php echo str_replace(" ", "T", $query->start) ?>">
+                    Koniec: <input type="datetime-local" required name="end" value="<?php echo str_replace(" ", "T", $query->end) ?>">
                     <input type="hidden" name="id" value="<?php echo $query->id ?>">
-                    Názov:
-                    <input type="text" required name="subplace" value="<?php echo $query->sub_place ?>">
-                    Cena/hodina:
-                    <input type="number" required name="price" min="10" step="1" value="<?php echo $query->price ?>">
-                    <input type="submit" name="potvrd" value="Potvrdiť úpravu">
+                    <input type="submit" name="potvrd" value="Upraviť">
                 </form>
-            </div>
         </div>
     </div>
 </div>
