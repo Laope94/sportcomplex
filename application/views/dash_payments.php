@@ -5,26 +5,30 @@
             <div class="dark-bar" >
                 <h2>You are god now</h2>
                 Top level data <br>
-                <a href="<?php echo site_url('admin/show_places');?>">Športy</a> <br>
-                <a href="<?php echo site_url('admin/show_subplaces');?>">Športoviská</a> <br>
-                <a href="<?php echo site_url('admin/show_payments');?>">Metódy platby</a> <br> <br>
+                <a href="<?php echo site_url('admin/show_places'); ?>">Športoviská</a> <br>
+                <a href="<?php echo site_url('admin/show_subplaces'); ?>">Detail športoviska</a> <br>
+                <a href="<?php echo site_url('admin/show_payments'); ?>">Metódy platby</a> <br> <br>
                 Lower data <br>
-                <a href="<?php echo site_url('admin/show_invoices');?>">Faktúry</a> <br>
-                <a href="<?php echo site_url('admin/show_entries');?>">Položky na faktúre</a> <br><br>
-                Stats<br>
+                <a href="<?php echo site_url('admin/show_invoices'); ?>">Faktúry</a> <br>
+                <a href="<?php echo site_url('admin/show_entries'); ?>">Položky na faktúre</a> <br><br>
                 Stats<br>
                 <a href="<?php echo site_url('admin/chart_payment');?>">Forma platby</a><br>
                 <a href="<?php echo site_url('admin/chart_sport');?>">Obľúbené športoviská</a><br>
                 <a href="<?php echo site_url('admin/chart_income');?>">Príjmy</a><br>
-                <a href="<?php echo site_url('admin/chart_compare');?>">Otvorené faktúry</a><br>
+                <a href="<?php echo site_url('admin/chart_compare');?>">Otvorené faktúry</a><br><br>
+                <a href="<?php echo site_url('welcome/index');?>">Hlavná strána</a>
             </div>
         </div>
         <div class="col-sm-9">
-            <div class="dash-content">
+
+                <div class="dash-add">
+                    <h3>Pridať metódu platby</h3>
                 <form action="<?php echo site_url('admin/payment_add');?>" method="post">
                    Názov: <input type="text" required name="method">
                     <input type="submit" name="potvrd" value = "Pridať">
                 </form>
+                </div>
+            <div class="dash-content">
                 <table>
                     <tr>
                         <th>ID</th>

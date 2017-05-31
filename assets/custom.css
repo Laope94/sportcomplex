@@ -24,7 +24,7 @@
 }
 
 /* Change the link color to #111 (black) on hover */
-.menu-link-area:hover {
+.menu-link-area:hover{
     color: inherit;
     background-color: #4CAF50;
 }
@@ -64,7 +64,7 @@
     background-color: #4CAF50;
 }
 
-.dark-background {
+.dark-background{
     text-align: center;
     color: whitesmoke;
     margin: 100px;
@@ -75,7 +75,7 @@
     background-color: #222222;
 }
 
-.dark-form {
+.dark-form{
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -94,15 +94,21 @@
     color: whitesmoke;
 }
 
-.dash-content{
-   padding: 10px;
+.dash-add{
+    padding: 15px;
 }
 
-table {
+.dash-content{
+   padding: 15px;
+    height: 60%;
+    overflow: scroll;
+}
+
+table{
     width: 100%;
 }
 
-th, td {
+th, td{
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 5px;

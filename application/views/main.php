@@ -112,7 +112,7 @@
     <div class="complex-contact">
         <h2>KONTAKT</h2>
         <a name="kontakt" id="kontakt"></a>
-        Adresa: Zelená 4, Hrochoťa <br>
+        Adresa: Zelená 4, Hrochoť <br>
         Telefón: +421 999 666 <br>
         Email: zdenovkomplex@gmail.com <br>
         Alebo sa spýtajte Joža v hornej karčme
