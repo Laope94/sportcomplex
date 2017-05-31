@@ -12,10 +12,10 @@
                 <a href="<?php echo site_url('admin/show_invoices');?>">Faktúry</a> <br>
                 <a href="<?php echo site_url('admin/show_entries');?>">Položky na faktúre</a> <br><br>
                 Stats<br>
-                <a>chart 1</a><br>
-                <a>chart 2</a><br>
-                <a>chart 3</a><br>
-                <a>chart 4</a><br>
+                <a href="<?php echo site_url('admin/chart_payment');?>">Forma platby</a><br>
+                <a href="<?php echo site_url('admin/chart_sport');?>">Obľúbené športoviská</a><br>
+                <a href="<?php echo site_url('admin/chart_income');?>">Príjmy</a><br>
+                <a href="<?php echo site_url('admin/chart_compare');?>">Otvorené faktúry</a><br>
             </div>
         </div>
         <div class="col-sm-9">

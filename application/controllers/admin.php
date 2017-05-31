@@ -242,4 +242,32 @@ class admin extends CI_Controller
         $this->show_invoices();
     }
 
+    public function chart_payment(){
+        $this->load->model('AdminModel', NULL, TRUE);
+        $data['query'] = $this->AdminModel->get_paymentstat();
+        $this->load->view('header');
+        $this->load->view('payment_chart', $data);
+    }
+
+    public function chart_sport(){
+        $this->load->model('AdminModel', NULL, TRUE);
+        $data['query'] = $this->AdminModel->get_sportstat();
+        $this->load->view('header');
+        $this->load->view('sport_chart', $data);
+    }
+
+    public function chart_income(){
+        $this->load->model('AdminModel', NULL, TRUE);
+        $data['query'] = $this->AdminModel->get_incomestat();
+        $this->load->view('header');
+        $this->load->view('income_chart', $data);
+    }
+
+    public function chart_compare(){
+        $this->load->model('AdminModel', NULL, TRUE);
+        $data['open'] = $this->AdminModel->get_open();
+        $data['closed'] = $this->AdminModel->get_closed();
+        $this->load->view('header');
+        $this->load->view('compare_chart', $data);
+    }
 }

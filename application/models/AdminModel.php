@@ -212,4 +212,39 @@ class AdminModel extends CI_Model
  creation_date='$created', amount='$amount', payment_form='$payment', is_closed='$closed', is_paid='$paid' WHERE id='$id'");
         return ($this->db->affected_rows() > 0) ? true : false;
     }
+
+    public function get_paymentstat()
+    {
+        $query = $this->db->query("SELECT payment_form.type AS typ, COUNT(invoice.payment_form) AS pocet FROM `invoice`
+        INNER JOIN payment_form ON payment_form.id=invoice.payment_form
+        GROUP BY payment_form.type");
+        return $query->result();
+    }
+
+    public function get_sportstat(){
+        $query = $this->db->query("SELECT sport_place.name AS sport, COUNT(invoice_entry.sub_place) as pocet FROM `invoice_entry`
+INNER JOIN sub_place ON sub_place.id=invoice_entry.sub_place
+INNER JOIN sport_place ON sport_place.id = sub_place.sport_place
+GROUP BY sport_place.name");
+        return $query->result();
+    }
+
+    public function get_incomestat()
+    {
+        $query = $this->db->query("SELECT  MONTH(creation_date) AS mesiac, SUM(amount) AS suma FROM `invoice` GROUP BY mesiac");
+        return $query->result();
+    }
+
+    public function get_closed()
+    {
+        $query = $this->db->query("SELECT COUNT(id) as closed FROM invoice WHERE is_closed='1'");
+        return $query->row();
+    }
+
+    public function get_open(){
+        {
+            $query = $this->db->query("SELECT COUNT(id) as open FROM invoice WHERE is_closed='0'");
+            return $query->row();
+        }
+    }
 }
